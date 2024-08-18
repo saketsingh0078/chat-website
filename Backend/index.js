@@ -52,6 +52,10 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
+app.get("/", (req, res) => {
+  res.send("Hello");
+});
+
 // Socket.IO
 io.on("connection", (socket) => {
   console.log("A user connected:", socket.id);
