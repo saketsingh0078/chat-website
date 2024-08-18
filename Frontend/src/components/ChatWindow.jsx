@@ -8,15 +8,15 @@ import axios from "axios";
 import UserShimmer from "./UserShimmer";
 import MessageShimmer from "./MessageShimmer";
 
-const socket = io("https://chat-website-api.onrender.com/");
+const socket = io("http://localhost:5000");
 
 function ChatWindow({ userId }) {
   const [users, setUsers] = useState([]);
   const [selectedUser, setSelectedUser] = useState(null);
   const [messages, setMessages] = useState([]);
   const [typingUser, setTypingUser] = useState(null);
-  const [loadingUsers, setLoadingUsers] = useState(true);
-  const [loadingMessages, setLoadingMessages] = useState(false);
+  const [loadingUsers, setLoadingUsers] = useState(true); // Loading state for users
+  const [loadingMessages, setLoadingMessages] = useState(false); // Loading state for messages
 
   const messagesEndRef = useRef(null);
   const timerId = useRef(null);
@@ -83,19 +83,16 @@ function ChatWindow({ userId }) {
     try {
       setLoadingUsers(true); // Start loading users
       const token = localStorage.getItem("token");
-      const response = await axios.get(
-        "https://chat-website-api.onrender.com/api/users",
-        {
-          headers: {
-            Authorization: token,
-          },
-        }
-      );
+      const response = await axios.get("http://localhost:5000/api/users", {
+        headers: {
+          Authorization: token,
+        },
+      });
       setUsers(response.data);
-      setLoadingUsers(false);
+      setLoadingUsers(false); // Users fetched, stop loading
     } catch (error) {
       console.error("Error fetching users:", error);
-      setLoadingUsers(false);
+      setLoadingUsers(false); // Error, stop loading
     }
   };
 
@@ -112,7 +109,7 @@ function ChatWindow({ userId }) {
       setLoadingMessages(true); // Start loading messages
       const token = localStorage.getItem("token");
       const response = await axios.get(
-        `https://chat-website-api.onrender.com/api/messages/${otherUserId}`,
+        `http://localhost:5000/api/messages/${otherUserId}`,
         {
           headers: {
             Authorization: token,
