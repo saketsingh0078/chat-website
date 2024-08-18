@@ -39,6 +39,7 @@ npm install
 npm start
 ```
 ## FIle Structure
+```bash
 Backend/
 │
 ├── models/
@@ -59,8 +60,9 @@ Backend/
 │
 ├── index.js
 └── config.js
+```
 
-
+```bash
 Frontend/
 src/
 |-- components/
@@ -74,5 +76,5 @@ src/
 |   |-- User.js
 |   |-- SearchBar.js
 |   |-- NotificationBar.js
-
+```
 
