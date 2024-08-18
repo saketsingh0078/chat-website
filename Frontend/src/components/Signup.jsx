@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 
-function Signup() {
+function Signup({ setAuth }) {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -10,7 +10,7 @@ function Signup() {
   const navigate = useNavigate();
   const [error, setError] = useState("");
 
-  const handleSignup = async ({ setAuth }) => {
+  const handleSignup = async () => {
     setLoading(true);
     setError("");
     try {

@@ -2,7 +2,7 @@ import React from "react";
 import { IoSearchOutline } from "react-icons/io5";
 
 const UserShimmer = () => {
-  const btn = ["All", "Unread", "Archieved", "Blocked"];
+  const btn = ["", "", "", ""];
   return (
     <div className="w-[25%] h-full py-4 border-r-2 border-gray-200 animate-pulse">
       <div className="border-b-2 border-gray-200 px-4b animate-pulse">
@@ -15,6 +15,7 @@ const UserShimmer = () => {
       <div className="flex gap-2 flex-wrap border-b-2 border-gray-300 p-3 animate-pulse">
         {btn.map((btn, index) => (
           <button
+            key={index}
             className="border-gray-300 w-[45px] h-[25px] 
              rounded-full px-2 py-0.5 border-2"
           ></button>

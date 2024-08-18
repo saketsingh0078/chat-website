@@ -7,6 +7,7 @@ const NotifiactionBar = () => {
     <div className="flex gap-2 flex-wrap border-b-2 border-gray-300 p-3">
       {btn.map((btn, index) => (
         <button
+          key={index}
           className={` ${
             btn === "All"
               ? " bg-orange-600 text-white"

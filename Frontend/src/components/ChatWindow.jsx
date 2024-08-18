@@ -129,16 +129,12 @@ function ChatWindow({ userId }) {
   return (
     <>
       <div className="h-[100vh] flex">
-        {loadingUsers ? (
-          <UserShimmer />
-        ) : (
-          <UserList
-            userId={userId}
-            users={users}
-            selectedUser={selectedUser}
-            handleUserSelection={handleUserSelection}
-          />
-        )}
+        <UserList
+          userId={userId}
+          users={users}
+          selectedUser={selectedUser}
+          handleUserSelection={handleUserSelection}
+        />
         <div className="w-[75%] h-full">
           {loadingMessages ? (
             <MessageShimmer />

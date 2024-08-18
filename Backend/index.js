@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -13,7 +14,9 @@ const io = new Server(server, {
   },
 });
 
-const { PORT, JWT_SECRET, MONGODB_URI } = require("./config");
+const PORT = process.env.PORT || 3000;
+const JWT_SECRET = process.env.JWT_SECRET;
+const MONGODB_URI = process.env.MONGODB_URI;
 
 // MongoDB connection
 mongoose
