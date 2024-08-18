@@ -3,10 +3,10 @@ Chat Website
 ## Overview
 This is a real-time chat application built using modern web technologies. It allows users to communicate in real-time with a smooth and responsive user interface. The project stack includes:
 
-## Frontend: React (Vite) with Tailwind CSS
-## Backend: Node.js with Express
-## Database: MongoDB
-## Real-time Communication: Socket.IO
+Frontend: React (Vite) with Tailwind CSS </br>
+Backend: Node.js with Express </br>
+Database: MongoDB </br>
+Real-time Communication: Socket.IO
 
 ## Features
 Real-time Messaging: Users can send and receive messages instantly without refreshing the page.
