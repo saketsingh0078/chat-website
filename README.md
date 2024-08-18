@@ -8,6 +8,15 @@ Backend: Node.js with Express </br>
 Database: MongoDB </br>
 Real-time Communication: Socket.IO
 
+signup
+![img3](https://github.com/user-attachments/assets/70d7f1b5-002d-4ab2-b118-42f98234ecff)
+
+login
+![img 2](https://github.com/user-attachments/assets/f44db8f4-f822-4783-9bde-16b70f91582f)
+
+dashboard
+![img1](https://github.com/user-attachments/assets/51bd0f07-d3db-439b-af77-7b1f98923870)
+
 ## Features
 Real-time Messaging: Users can send and receive messages instantly without refreshing the page.
 Online/Offline Status: The application displays the online/offline status of users.
