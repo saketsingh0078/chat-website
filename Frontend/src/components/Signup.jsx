@@ -15,7 +15,7 @@ function Signup({ setAuth }) {
     setError("");
     try {
       const response = await axios.post(
-        "https://chat-website-app.onrender.com/api/auth/signup",
+        "https://chat-website-api.onrender.com/api/auth/signup",
         {
           username,
           email,

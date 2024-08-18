@@ -8,7 +8,7 @@ import axios from "axios";
 import UserShimmer from "./UserShimmer";
 import MessageShimmer from "./MessageShimmer";
 
-const socket = io("https://chat-website-app.onrender.com/");
+const socket = io("https://chat-website-api.onrender.com/");
 
 function ChatWindow({ userId }) {
   const [users, setUsers] = useState([]);
@@ -84,7 +84,7 @@ function ChatWindow({ userId }) {
       setLoadingUsers(true); // Start loading users
       const token = localStorage.getItem("token");
       const response = await axios.get(
-        "https://chat-website-app.onrender.com/api/users",
+        "https://chat-website-api.onrender.com/api/users",
         {
           headers: {
             Authorization: token,
@@ -112,7 +112,7 @@ function ChatWindow({ userId }) {
       setLoadingMessages(true); // Start loading messages
       const token = localStorage.getItem("token");
       const response = await axios.get(
-        `https://chat-website-app.onrender.com/api/messages/${otherUserId}`,
+        `https://chat-website-api.onrender.com/api/messages/${otherUserId}`,
         {
           headers: {
             Authorization: token,
