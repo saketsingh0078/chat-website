@@ -1,4 +1,4 @@
-Chat Website
+## Chat Website
 
 ## Overview
 This is a real-time chat application built using modern web technologies. It allows users to communicate in real-time with a smooth and responsive user interface. The project stack includes:
