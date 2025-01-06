@@ -5,6 +5,7 @@ const cors = require("cors");
 const multer = require("multer");
 const http = require("http");
 const { Server } = require("socket.io");
+const cron = require("node-cron");
 
 const app = express();
 const server = http.createServer(app);
@@ -15,6 +16,13 @@ const io = new Server(server, {
 });
 
 const { PORT, JWT_SECRET, MONGODB_URI } = require("./config");
+
+// Schedule a job to run every minute
+cron.schedule("* * * * *", () => {
+  console.log("Cron job running every minute:", new Date().toLocaleString());
+});
+
+console.log("Cron job is set up");
 
 // MongoDB connection
 mongoose
